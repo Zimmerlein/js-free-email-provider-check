@@ -11,39 +11,39 @@
 			
 		</div>
 	
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  	<script>
-  		var unallowedEmails = [
-  		"gmail.com", 
-  		"mail.com", 
-  		"yahoo.com", 
-  		"yahoo.co.uk", 
-  		"onmicrosoft.com",
-		"hotmail.com", 
-		"outlook.com", 
-		"icloud.com", 
-		"yandex.mail", 
-		"zohomail.eu", 
-		"protonmail.com", 
-		"protonmail.ch", 
-		"hey.com"]
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  		<script>
+  			var unallowedEmails = [
+  			"gmail.com", 
+  			"mail.com", 
+  			"yahoo.com", 
+  			"yahoo.co.uk", 
+  			"onmicrosoft.com",
+			"hotmail.com", 
+			"outlook.com", 
+			"icloud.com", 
+			"yandex.mail", 
+			"zohomail.eu", 
+			"protonmail.com", 
+			"protonmail.ch", 
+			"hey.com"]
 		
-		var regex = new RegExp('\\b' + unallowedEmails.join("\\b|\\b") + '\\b', 'i');
+			var regex = new RegExp('\\b' + unallowedEmails.join("\\b|\\b") + '\\b', 'i');
 
-		$(function () {
-  			$(".email-freeprovider-check").on("change", function () {
+			$(function () {
+  				$(".email-freeprovider-check").on("change", function () {
   				
-    			if(!regex.test(this.value)){
-    				$('.submit-email-check').removeAttr('disabled');
-    				$('.error').hide();
+    				if(!regex.test(this.value)){
+    					$('.submit-email-check').removeAttr('disabled');
+    					$('.error').hide();
     				
-    			}else{ 
-    				$('.submit-email-check').attr('disabled', 'disabled'); 
-    				$('.error').remove();
-    				$(".email-freeprovider-check").after('<span class="free-mail-error">Please enter a valid email address.</span>');
-    			}
-  			});
-		});
-		
-  	</script>
-</body></html>
+    				}else{ 
+    					$('.submit-email-check').attr('disabled', 'disabled'); 
+    					$('.error').remove();
+    					$(".email-freeprovider-check").after('<span class="free-mail-error">Please enter a valid email address.</span>');
+    				}
+  				});
+			});
+		</script>
+	</body>
+</html>
