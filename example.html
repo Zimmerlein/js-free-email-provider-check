@@ -35,11 +35,11 @@
   				
     			if(!regex.test(this.value)){
     				$('.submit-email-check').removeAttr('disabled');
-    				$('.free-mail-error').hide();
+    				$('.error').hide();
     				
     			}else{ 
     				$('.submit-email-check').attr('disabled', 'disabled'); 
-    				
+    				$('.error').remove();
     				$(".email-freeprovider-check").after('<span class="free-mail-error">Please enter a valid email address.</span>');
     			}
   			});
